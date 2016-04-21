@@ -1,0 +1,36 @@
+/*========================================
+=            Section Appended            =
+========================================*/
+.sectionAppended {
+  position: absolute;
+  width: 1550px;
+  height: 850px;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.94);
+  left: 262px;
+  top: 100px;
+  color: white;
+  text-align: center;
+  /*----------  HomePage Content  ----------*/
+}
+
+.sectionAppended #HomePage {
+  position: absolute;
+  top: 225px;
+  left: 600px;
+}
+
+.sectionAppended #HomePage ul {
+  padding: 0px;
+}
+
+.sectionAppended #HomePage ul li {
+  display: inline;
+  list-style: none;
+  font-size: 150px;
+}
+
+.sectionAppended #HomePage #Date {
+  font-size: 50px;
+  font-weight: 100;
+}

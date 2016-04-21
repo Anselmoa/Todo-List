@@ -1,0 +1,397 @@
+/***
+TABLE OF CONTENTS
+
+Body: no scrollbar
+    - img: Background Image
+
+navbar-default: Gradiente/Background
+    - div: Text
+
+sideMenu:
+    -li: List of content
+    -a: anchor of the list (no decoration)
+    -sideMenuList: List of the buttons (Override li above)
+                   On hover background change with a transition and anchor and icons color change
+    -sideMenuListLogout
+    -list-group-img: Profile Image
+    -sideMenuProfileName: Profile Name
+
+sideMenuToggle: buttons to toggle sideMenu
+                change color on hover
+
+***/
+/*========================================
+=            Section Appended            =
+========================================*/
+/*----------  HomePage Content  ----------*/
+#HomePage {
+  z-index: -1;
+  position: absolute;
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+#HomePage .clock {
+  font-size: 150px;
+  display: inline;
+  padding: 0;
+  list-style: none;
+}
+
+#HomePage #Date {
+  font-size: 50px;
+  font-weight: 100;
+  margin-top: -50px;
+}
+
+#HomePage #Notification {
+  font-size: 13px;
+  position: relative;
+  z-index: 1;
+  float: right;
+  overflow: hidden;
+  width: auto;
+  height: 188px;
+  text-align: left;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 1400px) {
+  #HomePage #Notification {
+    top: 25%;
+  }
+}
+
+@media (min-width: 1400px) {
+  #HomePage #Notification {
+    top: 40%;
+  }
+}
+
+#HomePage #Notification li {
+  line-height: 20px;
+  overflow: hidden;
+  max-width: 200px;
+  max-height: 20px;
+  margin-top: 10px;
+  list-style: none;
+}
+
+#HomePage #Notification ul {
+  margin-top: 10px;
+  margin-left: -10px;
+}
+
+#HomePage #Notification .notificationTitle {
+  font-weight: bold;
+  color: gray;
+}
+
+#HomePage #Notification input {
+  margin: 0;
+  padding-top: 3x;
+}
+
+/*----------  To-Do Content  ----------*/
+#To-Do {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: 80px;
+}
+
+#To-Do .btn-circle {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.42;
+  border-radius: 30px;
+  border: 1px solid black;
+  background-color: #fe531b;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fe531b), to(#E91E63));
+  background-image: -webkit-linear-gradient(top, #fe531b, #E91E63);
+  background-image: -moz-linear-gradient(top, #fe531b, #E91E63);
+  background-image: -ms-linear-gradient(top, #fe531b, #E91E63);
+  background-image: -o-linear-gradient(top, #fe531b, #E91E63);
+  background-image: linear-gradient(top, #fe531b, #E91E63);
+  filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr= '#fe531b', end-colourStr='#E91E63');
+  font-size: 25px;
+  padding: 2px;
+  color: black;
+  position: relative;
+  left: 40%;
+  margin-bottom: 15px;
+}
+
+#To-Do .tarefa-list {
+  position: relative;
+  left: 22%;
+  text-align: left;
+  padding: 0 0 0 15px;
+  width: 900px;
+  line-height: 30px;
+  color: white;
+  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-color: gray;
+  overflow: hidden;
+}
+
+#To-Do .tarefa-list input {
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-size: 15px;
+  color: #f3f3f3;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+#To-Do .tarefa-list label {
+  line-height: 40px;
+  padding-left: 10px;
+  padding-bottom: 0;
+  border-left: 1px solid black;
+  margin-bottom: 0;
+}
+
+#To-Do .close {
+  color: white;
+  margin-top: 8px;
+  margin-right: 12px;
+  text-shadow: 0;
+  opacity: 0.8;
+}
+
+#To-Do .description-Paragraph {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 10px;
+  display: inline-block;
+  font-size: 12px;
+  color: gray;
+  overflow: hidden;
+  max-width: 750px;
+  max-height: 20px;
+}
+
+.checked {
+  color: white;
+  text-decoration: line-through;
+}
+
+#calendar {
+  width: 900px;
+  height: 500px;
+  position: relative;
+  left: 25%;
+  top: 11%;
+  color: black;
+}
+
+* {
+  font-family: Lucida Grande/Tahoma;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-image: url("/img/HomepageImg.jpg");
+  background-repeat: none;
+  /* remove scrollbar space */
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+  /* optional: just make scrollbar invisible */
+}
+
+body img {
+  position: absolute;
+  z-index: -1;
+}
+
+@media (min-width: 1200px) {
+  body img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1200px) {
+  body img {
+    width: 100%;
+    height: 780px;
+  }
+}
+
+/*=====  End of Background  ======*/
+/*==============================
+=            NavBar            =
+==============================*/
+.navbar-default {
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  -webkit-box-shadow: 0 0 3px 1px #000000;
+  -moz-box-shadow: 0 0 3px 1px #000000;
+  box-shadow: 0 0 3px 1px #000000;
+  background-color: #fe531b;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fe531b), to(#E91E63));
+  background-image: -webkit-linear-gradient(top, #fe531b, #E91E63);
+  background-image: -moz-linear-gradient(top, #fe531b, #E91E63);
+  background-image: -ms-linear-gradient(top, #fe531b, #E91E63);
+  background-image: -o-linear-gradient(top, #fe531b, #E91E63);
+  background-image: linear-gradient(top, #fe531b, #E91E63);
+  filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr= '#fe531b', end-colourStr='#E91E63');
+  line-height: 50px;
+  margin: 0;
+  width: 100%;
+  max-height: 40px;
+}
+
+.navbar-default .navbarbrand {
+  margin-top: 20px;
+  margin-left: 200px;
+}
+
+.navbar-default #brandIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  z-index: 1;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.navbar-default div {
+  display: inline-block;
+  padding-left: 45px;
+  font-size: 17px;
+  font-weight: bold;
+  color: black;
+}
+
+/*=====  End of NavBar  ======*/
+/*================================
+=            SideMenu            =
+================================*/
+.sideMenu {
+  display: block;
+  background-color: #191918;
+  width: 250px;
+  min-height: 100%;
+  max-height: 1000px;
+  position: absolute;
+  left: -260px;
+  display: none;
+  z-index: 1;
+}
+
+@media (max-width: 1400px) {
+  .sideMenu {
+    min-height: 1000px;
+    max-height: 1000px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .sideMenu {
+    min-height: 100%;
+    max-height: 1000px;
+  }
+}
+
+.sideMenu li {
+  top: 250px;
+  margin-bottom: 5px;
+  position: relative;
+  background-color: inherit;
+  border: 0;
+  color: white;
+}
+
+.sideMenu a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sideMenu .sideMenuList {
+  top: 300px;
+  font-size: 20px;
+  width: 250px;
+  line-height: 80px;
+  padding-left: 30px;
+  list-style: none;
+}
+
+.sideMenu .sideMenuList:hover {
+  background-color: #595959;
+  padding-left: 55px;
+  transition: all 0.4s;
+}
+
+.sideMenu .sideMenuList:hover .glyphicon {
+  color: black;
+}
+
+.sideMenu .sideMenuList:hover a {
+  color: black;
+  font-weight: bold;
+}
+
+.sideMenu .sideMenuListLogout {
+  top: 510px;
+  padding-left: 75px;
+}
+
+.sideMenu .list-group-img {
+  position: static;
+}
+
+.sideMenu .list-group-img img {
+  width: 200px;
+  height: 200px;
+  margin-left: 21px;
+  z-index: 1;
+}
+
+.sideMenu .sideMenuProfileName {
+  top: 210px;
+  font-size: 18px;
+  width: 250px;
+  overflow: hidden;
+  text-align: center;
+  list-style: none;
+  color: white;
+}
+
+/*=====  End of SideMenu  ======*/
+/*=============================================
+=            Section comment block            =
+=============================================*/
+.sideMenuToggle {
+  position: absolute;
+  left: 10px;
+  top: 60px;
+  font-size: 30px;
+}
+
+.sideMenuToggle a {
+  text-decoration: none;
+  color: #191918;
+}
+
+.sideMenuToggle a:hover {
+  color: #92928A;
+}
+
+/*=====  End of Section comment block  ======*/

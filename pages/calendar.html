@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Listreme ToDO</title>
+
+        <!--Bootstrap -->
+        <link href="/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/style/css/homepage.css">
+
+        <link rel="stylesheet" href="/plugins/e-calendar-master/css/jquery.e-calendar.css"/>
+</head>
+<body>
+
+<!--NavBar -->
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                        <div class="navbar-header">
+                                <a class="navbarbrand">
+                                        <img src="/img/Icon.png" alt=brand id="brandIcon">
+                                        <div class="navbarTitle">Listreme</div>
+                                </a>
+                        </div>
+                </div>
+        </nav>
+
+        <!--==============================
+        =            Side Bar            =
+        ===============================-->
+
+        <div class="sideMenu">
+
+                <ul class="list-group">
+                        <li class="list-group-img">
+                                <img class="img-circle img-responsive" src='/img/homepageImg.jpg' alt='Profile Image' id="sideMenuProfileImg"></img>
+                        </li>
+                        <li class="sideMenuProfileName"><a href="#" id="sideMenuProfileName">Fabio Anselmo</a></li>
+                        <li class="sideMenuList">
+                                <i class="glyphicon glyphicon-home"></i>
+                                <a href="#" id="sideMenuHomePage">HomePage</a></li>
+                        <li class="sideMenuList">
+                                <i class=" glyphicon glyphicon-list"></i>
+                                <a href="#" id="sideMenuToDo">To-do<a>
+                        </li>
+                        <li class="sideMenuList">
+                                <i class=" glyphicon glyphicon-calendar"></i>
+                                <a href="#" id="sideMenuCalendar">Calendar</a>
+                        </li>
+                        <li class="sideMenuList sideMenuListLogout">
+                                <i class=" glyphicon glyphicon-off"></i>
+                                <a href="#" id="sideMenuLogOut">LogOut</a>
+                        </li>
+                </ul>
+        </div>
+
+        <!--====  End of Side Bar  ====-->
+
+        <!-- =======================================
+        =            SideMenu Toggle            =
+        ======================================= -->
+
+        <div class="sideMenuToggle">
+                <a class="glyphicon glyphicon-align-justify" id="sideMenuToggleButton"></a>
+        </div>
+
+        <!-- =====  End of SideMenu Toggle  ====== -->
+
+        <div id="calendar">
+
+        </div>
+
+
+
+        <!-- jQuery (necessary for      Bootstrap's JavaScript plugins) -->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+        <script src="/js/calendar.js"></script>
+        <script src="/js/sidemenu.js"></script>
+
+        <script type="text/javascript" src="/plugins/e-calendar-master/js/jquery.e-calendar.js"></script>
+</body>
+</html>

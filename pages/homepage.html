@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Listreme Homepage</title>
+
+        <!--Bootstrap -->
+        <link href="/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/style/css/homepage.css">
+    </head>
+    <body>
+
+        <!-- NavBar -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbarbrand">
+                        <img src="/img/Icon.png" alt=brand id="brandIcon">
+                        <div class="navbarTitle">Listreme</div>
+                    </a>
+                </div>
+            </div>
+        </nav> <!-- End NavBar -->
+
+
+        <!-- SideMenu -->
+        <div class="sideMenu">
+
+            <!-- Content do SideMenu -->
+            <ul class="list-group">
+                <!-- List of the Profile Image -->
+                <li class="list-group-img">
+                    <img class="img-circle img-responsive" src='/img/homepageImg.jpg' alt='Profile Image' id="sideMenuProfileImg"></img>
+                </li>
+                <!-- End List of the Profile Image -->
+
+                <!-- List of the Profile Name -->
+                <li class="sideMenuProfileName">
+                    <a href="#" id="sideMenuProfileName" alt='Profile Name'></a>
+                </li>
+                <!-- End of the Profile Name -->
+
+                <!-- List of the Buttons -->
+                <li class="sideMenuList">
+                    <i class="glyphicon glyphicon-home"></i>
+                    <a href="#" id="sideMenuHomePage">HomePage</a>
+                </li>
+                <li class="sideMenuList">
+                    <i class=" glyphicon glyphicon-list"></i>
+                    <a href="#" id="sideMenuToDo">To-do<a>
+                </li>
+                <li class="sideMenuList">
+                    <i class=" glyphicon glyphicon-calendar"></i>
+                    <a href="#" id="sideMenuCalendar">Calendar</a>
+                </li>
+                <li class="sideMenuList sideMenuListLogout">
+                    <i class=" glyphicon glyphicon-off"></i>
+                    <a id="sideMenuLogOut">LogOut</a>
+                </li>
+                <!-- End List of the Buttons -->
+            </ul>
+            <!-- End Content do SideMenu -->
+        </div>
+        <!-- End of SideMenu -->
+
+
+        <!-- SideMenu Toggle -->
+        <div class="sideMenuToggle">
+            <a class="glyphicon glyphicon-align-justify" id="sideMenuToggleButton"></a>
+        </div>
+        <!-- End of SideMenu Toggle -->
+
+
+        <!-- HomePage Content -->
+        <div id="HomePage">
+
+            <!-- Clock -->
+            <ul class="clock">
+                <li id="hours" class="clock"></li>
+                <li id="point" class="clock">:</li>
+                <li id="min" class="clock"></li>
+            </ul>
+            <!-- End Clock -->
+
+            <div id="Date"></div>
+
+            <!-- Notification Content -->
+            <div id="Notification">
+                <ul>
+                    <li class="notificationTitle">
+                        <span id="notificationNumber">3</span>
+                        THINGS TO DO ON
+                    </li>
+                    <li class="notificationList">
+                        <input type="checkbox"></input>
+                        Thing 1 to do
+                    </li>
+                    <li class="notificationList">
+                        <input type="checkbox"></input>
+                        Thing 1 to do111111111111111111111112222231233123122
+                    </li>
+                    <li class="notificationList">
+                        <input type="checkbox"></input>
+                        Thing 1 to do
+                    </li>
+                    <li class="notificationList">
+                        <input type="checkbox"></input>
+                        Thing 1 to do
+                    </li>
+                    <li class="notificationList">
+                        <input type="checkbox"></input>
+                        Thing 1 to do
+                    </li>
+                    <li class="notificationList">
+                        <input type="checkbox"></input>
+                        Thing 1 to do
+                    </li>
+                </ul>
+            </div>
+            <!-- End of Notification Content -->
+        </div>
+        <!-- End of HomePage Content -->
+
+                <!-- jQuery (necessary for      Bootstrap's JavaScript plugins) -->
+                <script src="/plugins/jquery-1.12.2.min.js"></script>
+                <!-- Include all compiled plugins (below), or include individual files as needed -->
+                <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+                <script src="/js/homepage.js"></script>
+                <script src="/js/sidemenu.js"></script>
+
+            </body>
+        </html>

@@ -1,0 +1,197 @@
+/***
+TABLE OF CONTENTS
+
+Body: no scrollbar
+    - img: Background Image
+
+navbar-default: Gradiente/Background
+    - div: Text
+
+sideMenu:
+    -li: List of content
+    -a: anchor of the list (no decoration)
+    -sideMenuList: List of the buttons (Override li above)
+                   On hover background change with a transition and anchor and icons color change
+    -sideMenuListLogout
+    -list-group-img: Profile Image
+    -sideMenuProfileName: Profile Name
+
+sideMenuToggle: buttons to toggle sideMenu
+                change color on hover
+
+***/
+
+
+@import 'template';
+// Background Gradient: Top to Bottom
+@mixin bg-gradient-t2b($start-colour, $end-colour) {
+    background-color: $start-colour;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($start-colour), to($end-colour));
+    background-image: -webkit-linear-gradient(top, $start-colour, $end-colour);
+    background-image: -moz-linear-gradient(top, $start-colour, $end-colour);
+    background-image: -ms-linear-gradient(top, $start-colour, $end-colour);
+    background-image: -o-linear-gradient(top, $start-colour, $end-colour);
+    background-image: linear-gradient(top, $start-colour, $end-colour);
+    filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr= '#{$start-colour}', end-colourStr='#{$end-colour}');
+}
+* {
+    font-family: Lucida Grande/Tahoma;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-image: url('/img/HomepageImg.jpg');
+    background-repeat: none;
+
+    /* remove scrollbar space */
+    &::-webkit-scrollbar {
+        width: 0;
+        background: transparent;
+        /* optional: just make scrollbar invisible */
+    }
+    img {
+        position: absolute;
+        z-index: -1;
+        @media (min-width: 1200px) {
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 1200px) {
+            width: 100%;
+            height: 780px;
+        }
+    }
+}
+/*=====  End of Background  ======*/
+/*==============================
+=            NavBar            =
+==============================*/
+.navbar-default {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    -webkit-box-shadow: 0 0 3px 1px #000000;
+    -moz-box-shadow: 0 0 3px 1px #000000;
+    box-shadow: 0 0 3px 1px #000000;
+    @include bg-gradient-t2b(#fe531b, #E91E63);
+    line-height: 50px;
+    margin: 0;
+    width: 100%;
+    max-height: 40px;
+    .navbarbrand {
+        margin-top: 20px;
+        margin-left: 200px;
+    }
+    #brandIcon {
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        z-index: 1;
+        margin-top: 5px;
+        cursor: pointer;
+    }
+    div {
+        display: inline-block;
+        padding-left: 45px;
+        font-size: 17px;
+        font-weight: bold;
+        color: black;
+    }
+}
+/*=====  End of NavBar  ======*/
+/*================================
+=            SideMenu            =
+================================*/
+.sideMenu {
+    display: block;
+    background-color: #191918;
+    width: 250px;
+    min-height: 100%;
+    max-height: 1000px;
+    position: absolute;
+    left: -260px;
+    display: none;
+    z-index: 1;
+    @media (max-width: 1400px) {
+        min-height: 1000px;
+        max-height: 1000px;
+    }
+    @media (min-width: 1400px) {
+        min-height: 100%;
+        max-height: 1000px;
+    }
+    li {
+        top: 250px;
+        margin-bottom: 5px;
+        position: relative;
+        background-color: inherit;
+        border: 0;
+        color: white;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .sideMenuList {
+        top: 300px;
+        font-size: 20px;
+        width: 250px;
+        line-height: 80px;
+        padding-left: 30px;
+        list-style: none;
+        &:hover {
+            background-color: #595959;
+            padding-left: 55px;
+            transition: all 0.4s;
+            .glyphicon {
+                color: black;
+            }
+            a {
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
+    .sideMenuListLogout {
+        top: 510px;
+        padding-left: 75px;
+    }
+    .list-group-img {
+        position: static;
+        img {
+            width: 200px;
+            height: 200px;
+            margin-left: 21px;
+            z-index: 1;
+        }
+    }
+    .sideMenuProfileName {
+        top: 210px;
+        font-size: 18px;
+        width: 250px;
+        overflow: hidden;
+        text-align: center;
+        list-style: none;
+        color: white;
+    }
+}
+/*=====  End of SideMenu  ======*/
+/*=============================================
+=            Section comment block            =
+=============================================*/
+.sideMenuToggle {
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    font-size: 30px;
+    a {
+        text-decoration: none;
+        color: #191918;
+        &:hover {
+            color: #92928A;
+        }
+    }
+}
+/*=====  End of Section comment block  ======*/

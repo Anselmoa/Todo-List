@@ -1,0 +1,166 @@
+// Background Gradient: Top to Bottom
+@mixin bg-gradient-t2b($start-colour, $end-colour) {
+    background-color: $start-colour;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($start-colour), to($end-colour));
+    background-image: -webkit-linear-gradient(top, $start-colour, $end-colour);
+    background-image: -moz-linear-gradient(top, $start-colour, $end-colour);
+    background-image: -ms-linear-gradient(top, $start-colour, $end-colour);
+    background-image: -o-linear-gradient(top, $start-colour, $end-colour);
+    background-image: linear-gradient(top, $start-colour, $end-colour);
+    filter: progid:DXImageTransform.Microsoft.gradient(start-colourStr= '#{$start-colour}', end-colourStr='#{$end-colour}');
+}
+* {
+    font-family: Lucida Grande/Tahoma;
+}
+/*=============================================
+=            Background                       =
+=============================================*/
+body {
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/BackgroundLogin.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    img {
+        position: absolute;
+        z-index: -1;
+        @media (min-width: 1200px) {
+            width: 100%;
+            height: 100%;
+        }
+        @media (max-width: 1200px) {
+            width: 100%;
+            height: 780px;
+        }
+    }
+}
+/*=====  End of Background  ======*/
+/*==============================
+=            NavBar            =
+==============================*/
+.navbar-default {
+    line-height: 50px;
+    width: 100%;
+    max-height: 40px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    -webkit-box-shadow: 0 0 3px 1px #000;
+    -moz-box-shadow: 0 0 3px 1px #000;
+    box-shadow: 0 0 3px 1px #000;
+    @include bg-gradient-t2b(#fe531b, #e91e63);
+    .navbarbrand {
+        margin-top: 20px;
+        margin-left: 200px;
+    }
+    #brandIcon {
+        z-index: 1;
+        width: 40px;
+        height: 40px;
+        margin-top: 5px;
+        border-radius: 20px;
+    }
+    div {
+        font-size: 17px;
+        font-weight: bold;
+        display: inline-block;
+        padding-left: 45px;
+    }
+}
+/*=====  End of NavBar  ======*/
+/*=============================
+=            Login            =
+=============================*/
+.divLogin {
+    position: relative;
+    width: 500px;
+    height: 370px;
+    text-align: center;
+    border-radius: 20px;
+    background-color: rgba(0,0,0,.8);
+    @media (max-width: 1400px) {
+        top: 130px;
+        left: 28%;
+    }
+    @media (min-width: 1400px) {
+        top: 200px;
+        left: 39%;
+    }
+    //Login Text
+    h1 {
+        padding-top: 30px;
+        color: white;
+        span {
+            font-size: 30px;
+            margin-right: 7px;
+        }
+    }
+    //Subtitle
+    h2 {
+        font-size: 22px;
+        margin-bottom: 30px;
+        color: #838383;
+        span {
+            font-weight: bold;
+            color: #bfbfbf;
+        }
+    }
+    //Inputs UserName E Password
+    .input-group {
+        width: 300px;
+        margin-bottom: 10px;
+        margin-left: 110px;
+    }
+    //Log Ing Button
+    button {
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+    //Register Text
+    p {
+        color: white;
+        span {
+            color: #0876bd;
+            cursor: pointer;
+            &:hover {
+                color: #0885bd;
+            }
+        }
+    }
+    .wrongIcon {
+        display: none;
+    }
+    #wrongIconUser {
+        position: absolute;
+        top: 123px;
+        left: 420px;
+        background-color: rgba(0,0,0,0);
+        border: none;
+        font-size: 30px;
+        color: red;
+    }
+    #wrongIconPassword {
+        position: absolute;
+        top: 170px;
+        left: 420px;
+        background-color: rgba(0,0,0,0);
+        border: none;
+        font-size: 30px;
+        color: red;
+    }
+}
+.modal-content {
+    margin-top: 20px;
+
+    #modalTextContainer{
+      float: left;
+      margin-top: 5px;
+      margin-left: 10px;
+      width: 400px;
+      border: none;
+      color: black;
+      overflow: hidden;
+    }
+}
+/*=====  End of Login  ======*/

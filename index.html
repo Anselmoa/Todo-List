@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Listreme</title>
+
+        <!-- Bootstrap -->
+        <link href="/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/style/css/index.css">
+</head>
+
+<body>
+
+        <!-- NavBar -->
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                        <div class="navbar-header">
+                                <a class="navbarbrand" href="/index.html">
+                                        <img src="/img/Icon.png" alt=brand id="brandIcon">
+                                </a>
+                                <div>Listreme</div>
+                        </div>
+                </div>
+        </nav>
+
+
+        <!-- Login-Div -->
+        <div class="divLogin">
+
+                <!-- Header -->
+                <h1><span class="glyphicon glyphicon-lock"></span>Login</h1>
+                <h2>Please <span>Login</span> or <span>Register</span></h2>
+
+                <!-- Inputs-Logins -->
+                    <div class="input-group">
+                      <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-envelope"></span></span>
+                      <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1" id="user" autofocus>
+                    </div>
+
+                    <div class="input-group">
+                      <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-lock"></span></span>
+                      <input type="password" class="form-control" placeholder="Password" id="password">
+                    </div>
+                <!-- End-Inputs-Logins -->
+
+                <!-- Hidden-Wrong-Buttons -->
+                    <button type="button" class="wrongIcon" id="wrongIconPassword"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="wrongIcon" id="wrongIconUser"><span aria-hidden="true">&times;</span></button>
+                <!-- End-Hidden-Buttons -->
+
+                <button type="button" class="btn btn-primary" id="buttonLogIn">Log In</button>
+
+                <p>Dont't Have an account?
+                <a data-toggle='modal' data-target='#registerModal'><span>Register now</span></a>
+                </p>
+        </div> <!-- End-Login-Div -->
+
+
+        <!-- Modal-Register-Div -->
+        <div class="modal fade" id="registerModal" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title" id="exampleModalLabel">Register</h4>
+                        </div>
+
+                        <!-- Inputs-Register -->
+                            <div class="modal-body">
+                              <form>
+                                <div class="form-group">
+                                  <label class="control-label">UserName:</label>
+                                  <input type="text" class="form-control" id="registerUsername" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
+                                </div>
+
+                                <div class="form-group">
+                                  <label class="control-label">Profile Name:</label>
+                                  <input type="text" class="form-control" id="registerProfileName" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$">
+                                </div>
+
+                                <div class="form-group">
+                                  <label class="control-label">Password:</label>
+                                  <input type="password" class="form-control" id="registerPassword" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$">
+                                </div>
+
+                                <div class="form-group">
+                                  <label class="control-label">Confirm Password:</label>
+                                  <input type="password" class="form-control" id="registerConfirmPassword">
+                                </div>
+                              </form>
+                          </div>
+                        <!-- End-Inputs-Register -->
+
+                        <div class="modal-footer">
+                            <input type="text" name="name" id='modalTextContainer' value="">
+                            <button type="button" class="btn btn-primary" id="buttonAddRegister">Register</button>
+                          <button type="button" class="btn btn-default" data-dismiss="modal" id="buttonCancelRegister">Cancel</button>
+                        </div>
+                  </div> <!-- End-Modal-Content -->
+
+            </div>
+          </div>
+
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="/plugins/jquery-1.12.2.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="/js/index.js"></script>
+
+</body>
+</html>
